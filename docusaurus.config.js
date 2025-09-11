@@ -98,6 +98,15 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          {
+            type: 'html',
+            position: 'right',
+            value: `
+              <div class="navbar__searchWrap">
+                <input type="search" placeholder="검색..." class="navbar__search" />
+              </div>
+            `,
+          },
         ],
       },
       footer: {
