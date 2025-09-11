@@ -10,6 +10,16 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  // GitHub Pages 기본
+  url: 'https://cylee-catenoid.github.io', // ← 고정
+  baseUrl: '/player-guide/', // ← 리포지토리 이름에 맞춰 변경
+  organizationName: 'cylee-catenoid',
+  projectName: 'player-guide',
+
+  // 그 외 기본
+  trailingSlash: false,
+  deploymentBranch: 'gh-pages',
+
   title: 'Kollus 개발자 센터',
   tagline: 'Kollus 개발자 센터',
   favicon: 'img/favicon.ico',
@@ -18,17 +28,6 @@ const config = {
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
-
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
