@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   // GitHub Pages 기본
   url: 'https://cylee-catenoid.github.io', // ← 고정
-  baseUrl: '/player-guide/', // ← 리포지토리 이름에 맞춰 변경
+  baseUrl: 'player-guide', // ← 리포지토리 이름에 맞춰 변경
   organizationName: 'cylee-catenoid',
   projectName: 'player-guide',
 
