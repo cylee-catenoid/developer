@@ -3,7 +3,7 @@
  * and scoped locally.
  */
 
- .heroBanner {
+.heroBanner {
   background: var(--ifm-background-color);
   color: var(--ifm-font-color-base);
   text-align: center;
