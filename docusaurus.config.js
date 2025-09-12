@@ -82,8 +82,8 @@ const config = {
       navbar: {
         title: 'Kollus 개발자 센터',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: '',
+          src: 'img/favicon.ico',
         },
         items: [
           {
