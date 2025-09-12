@@ -3,23 +3,83 @@
  * and scoped locally.
  */
 
-.heroBanner {
-  padding: 4rem 0;
+ .heroBanner {
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
   text-align: center;
-  position: relative;
-  overflow: hidden;
+  padding: 4rem 0 2rem;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.heroTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
 }
 
-.buttons {
+.heroSubtitle {
+  margin: 0.75rem 0 0;
+  font-size: 1.125rem;
+  opacity: 0.9;
+}
+
+.cardRow {
+  margin: 2rem auto 4rem;
+}
+
+.card {
+  height: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;       /* 가로축 가운데 정렬 */
+  text-align: center;        /* 텍스트 가운데 정렬 */
+  border-radius: 0.75rem;
+  background: #eaf4fb;       /* 옅은 블루 배경 */
+  color: var(--ifm-font-color-base);
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: transform .12s ease, box-shadow .12s ease;
+  cursor: pointer;
+  padding: 1.5rem;           /* 안쪽 여백 추가 */
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.25);
+}
+
+.cardIcon {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  color: var(--ifm-color-primary); /* 시그니처 컬러 */
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardTitle {
+  margin: 0.5rem 0 0;
+  font-weight: 700;
+}
+
+.cardDesc {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.card :global(.card__header),
+.card :global(.card__body),
+.card :global(.card__footer) {
+  padding: 1.25rem 1.25rem 0;
+}
+
+.card :global(.card__footer) {
+  margin-top: auto;
+  padding-bottom: 1.25rem;
+}
+
+.cardLink {
+  text-decoration: none; /* 밑줄 제거 */
+  color: inherit; /* 카드 안의 글자색 유지 */
+  display: block; /* 블록화해서 카드 전체 클릭 가능 */
 }
 
 /* 검색창 모양 */

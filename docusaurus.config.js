@@ -36,8 +36,8 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ko',
+    locales: ['ko'],
   },
 
   presets: [
@@ -87,16 +87,29 @@ const config = {
         },
         items: [
           {
+            type: 'localeDropdown',
+            position: 'right',
+          },
+          {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: '개발 가이드',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
+            to: '/api',
+            label: 'API 레퍼런스',
+            position: 'left',
+          },
+          {
+            to: '/sdk',
+            label: '모바일 SDK',
+            position: 'left',
+          },
+          {
+            to: '/demo',
+            label: '데모 Player',
+            position: 'left',
           },
           {
             type: 'html',
@@ -111,7 +124,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [
+        /*links: [
           {
             title: 'Docs',
             items: [
@@ -151,8 +164,8 @@ const config = {
               },
             ],
           },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        ],*/
+        copyright: `Copyright © ${new Date().getFullYear()} CATENOID Inc. All rights reserved.`,
       },
       prism: {
         theme: prismThemes.github,
