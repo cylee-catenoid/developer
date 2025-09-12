@@ -48,7 +48,7 @@ export default function Home() {
         <div className={`row ${styles.cardRow}`}>
           {/* 개발 가이드 */}
           <div className="col col--4">
-            <Link to="/docs/guide/intro" className={styles.cardLink}>
+            <Link to="/docs/intro" className={styles.cardLink}>
               <div className={`card ${styles.card}`}>
                 <div className="card__header">
                   <h3 className={styles.cardTitle}>개발 가이드</h3>
@@ -61,7 +61,7 @@ export default function Home() {
 
           {/* API 레퍼런스 */}
           <div className="col col--4">
-            <Link to="/docs/api/overview" className={styles.cardLink}>
+            <Link to="/api" className={styles.cardLink}>
               <div className={`card ${styles.card}`}>
                 <div className="card__header">
                   <h3 className={styles.cardTitle}>API 레퍼런스</h3>
@@ -74,7 +74,7 @@ export default function Home() {
 
           {/* 모바일 SDK */}
           <div className="col col--4">
-            <Link to="/demo/player" className={styles.cardLink}>
+            <Link to="/sdk" className={styles.cardLink}>
               <div className={`card ${styles.card}`}>
                 <div className="card__header">
                   <h3 className={styles.cardTitle}>모바일 SDK</h3>
