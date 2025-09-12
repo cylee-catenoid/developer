@@ -35,7 +35,6 @@ export default function Home() {
       title="Kollus 개발자 센터"
       description="Kollus 개발자 문서 허브"
     >
-
       {/* Hero */}
       <header className={styles.heroBanner}>
         <div className="container">
@@ -43,47 +42,35 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Cards */}
       <main className="container">
-        <div className={`row ${styles.cardRow}`}>
-          {/* 개발 가이드 */}
-          <div className="col col--4">
-            <Link to="/docs/intro" className={styles.cardLink}>
-              <div className={`card ${styles.card}`}>
-                <div className="card__header">
-                  <h3 className={styles.cardTitle}>개발 가이드</h3>
-                </div>
-                <div className="card__body">
-                </div>
-              </div>
-            </Link>
-          </div>
+        <div className={styles.grid2x2}>
+          <Link to="https://cylee-catenoid.github.io/developer/docs" className={styles.cardLink}>
+            <div className={styles.card}>
+              <h3 className={styles.cardTitle}>개발 가이드</h3>
+              <p className={styles.cardSubtitle}></p>
+            </div>
+          </Link>
 
-          {/* API 레퍼런스 */}
-          <div className="col col--4">
-            <Link to="/api" className={styles.cardLink}>
-              <div className={`card ${styles.card}`}>
-                <div className="card__header">
-                  <h3 className={styles.cardTitle}>API 레퍼런스</h3>
-                </div>
-                <div className="card__body">
-                </div>
-              </div>
-            </Link>
-          </div>
+          <Link to="https://cylee-catenoid.github.io/developer/api" className={styles.cardLink}>
+            <div className={styles.card}>
+              <h3 className={styles.cardTitle}>API 레퍼런스</h3>
+              <p className={styles.cardSubtitle}></p>
+            </div>
+          </Link>
 
-          {/* 모바일 SDK */}
-          <div className="col col--4">
-            <Link to="/sdk" className={styles.cardLink}>
-              <div className={`card ${styles.card}`}>
-                <div className="card__header">
-                  <h3 className={styles.cardTitle}>모바일 SDK</h3>
-                </div>
-                <div className="card__body">
-                </div>
-              </div>
-            </Link>
-          </div>
+          <Link to="https://cylee-catenoid.github.io/developer/sdk" className={styles.cardLink}>
+            <div className={styles.card}>
+              <h3 className={styles.cardTitle}>모바일 SDK</h3>
+              <p className={styles.cardSubtitle}></p>
+            </div>
+          </Link>
+
+          <Link to="https://cylee-catenoid.github.io/developer/demo" className={styles.cardLink}>
+            <div className={styles.card}>
+              <h3 className={styles.cardTitle}>데모 Player</h3>
+              <p className={styles.cardSubtitle}></p>
+            </div>
+          </Link>
         </div>
       </main>
     </Layout>

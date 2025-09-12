@@ -1,19 +1,15 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
 .heroBanner {
   background: var(--ifm-background-color);
   color: var(--ifm-font-color-base);
   text-align: center;
-  padding: 4rem 0 2rem;
+  padding: 4rem 0 4rem;
 }
 
 .heroTitle {
   font-size: 2rem;
   font-weight: 800;
   margin: 0;
+  text-align: center;
 }
 
 .heroSubtitle {
@@ -22,28 +18,52 @@
   opacity: 0.9;
 }
 
-.cardRow {
-  margin: 2rem auto 4rem;
+/* ===== 2×2 GRID ===== */
+.grid2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;          /* 각 셀 높이 맞춤 */
+}
+.grid2x2 > a {                   /* 그리드 아이템: Link */
+  display: block;                /* 블록화(가로폭 100%) */
 }
 
+/* ===== CARD ===== */
 .card {
-  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;       /* 가로축 가운데 정렬 */
-  text-align: center;        /* 텍스트 가운데 정렬 */
-  border-radius: 0.75rem;
-  background: #eaf4fb;       /* 옅은 블루 배경 */
-  color: var(--ifm-font-color-base);
-  box-shadow: var(--ifm-global-shadow-lw);
-  transition: transform .12s ease, box-shadow .12s ease;
-  cursor: pointer;
-  padding: 1.5rem;           /* 안쪽 여백 추가 */
+  align-items: center;           /* 가로 중앙 */
+  justify-content: center;       /* 세로 중앙 */
+  text-align: center;
+  height: 100%;                  /* 셀 높이 가득 */
+  min-height: 200px;        /* 🔹 세로 기본 높이 확보 */
+  padding: 32px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  background: #eaf4fb;           /* #7648a3 옅은 톤 */
+  color: inherit;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 2px rgba(0,0,0,.06);
+  transition: transform .18s ease, box-shadow .18s ease,
+              border-color .18s ease, background-color .18s ease;
 }
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.25);
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  border-color: #3498db;
+  background: #d4e9f7;
+}
+
+/* 타이포 */
+.cardTitle    { font-weight: 700; font-size: 20px; margin: 0 0 8px; text-align: center; }
+.cardSubtitle { font-size: 14px; opacity: .85; margin: 0;text-align: center; }
+
+/* 링크 기본 */
+.cardLink {
+  text-decoration: none;
+  color: inherit;
 }
 
 .cardIcon {
@@ -55,31 +75,9 @@
   margin-bottom: 0.5rem;
 }
 
-.cardTitle {
-  margin: 0.5rem 0 0;
-  font-weight: 700;
-}
-
 .cardDesc {
   margin: 0;
   line-height: 1.6;
-}
-
-.card :global(.card__header),
-.card :global(.card__body),
-.card :global(.card__footer) {
-  padding: 1.25rem 1.25rem 0;
-}
-
-.card :global(.card__footer) {
-  margin-top: auto;
-  padding-bottom: 1.25rem;
-}
-
-.cardLink {
-  text-decoration: none; /* 밑줄 제거 */
-  color: inherit; /* 카드 안의 글자색 유지 */
-  display: block; /* 블록화해서 카드 전체 클릭 가능 */
 }
 
 /* 검색창 모양 */
