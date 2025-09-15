@@ -74,6 +74,18 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'sdk',
+        path: 'sdk',
+        routeBasePath: 'sdk',
+        sidebarPath: './sidebars.sdk.js',
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -102,9 +114,11 @@ const config = {
             position: 'left',
           },
           {
-            to: '/sdk',
-            label: '모바일 SDK',
+            type: 'docSidebar',
+            docsPluginId: 'sdk',
+            sidebarId: 'sdkSidebar',
             position: 'left',
+            label: '모바일 SDK',
           },
           {
             to: '/demo',
